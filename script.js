@@ -30,3 +30,9 @@ fetch('components/slider.html')
       sliderContent.appendChild(clonedImage);
     });
   });
+
+fetch('components/advantage.html')
+  .then(response => response.text())
+  .then(html => {
+    document.getElementById('advantage-container').innerHTML = html;
+  });
