@@ -16,3 +16,17 @@ fetch('components/banner.html')
   .then(html => {
     document.getElementById('banner-container').innerHTML = html;
   });
+
+fetch('components/slider.html')
+  .then(response => response.text())
+  .then(html => {
+    document.getElementById('slider-container').innerHTML = html;
+
+    const sliderContent = document.querySelector('.slider__content');
+    const sliderImages = document.querySelectorAll('.slider__content-img');
+
+    sliderImages.forEach(image => {
+      const clonedImage = image.cloneNode(true);
+      sliderContent.appendChild(clonedImage);
+    });
+  });
