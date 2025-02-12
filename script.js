@@ -10,3 +10,9 @@ fetch('components/header.html')
       navList.classList.toggle('active');
     });
   });
+
+fetch('components/banner.html')
+  .then(response => response.text())
+  .then(html => {
+    document.getElementById('banner-container').innerHTML = html;
+  });
