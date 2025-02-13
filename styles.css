@@ -14,10 +14,24 @@ body {
   color: #fff;
   text-align: center;
   padding: 1.6vh 4vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 8px 16px rgba(40, 43, 46, 0.17);
+  backdrop-filter: blur(4px);
+}
+
+.header,
+.header * {
+  box-sizing: border-box;
 }
 
 .header__img {
-  width: 200px;
+  width: 15vw;
+  max-width: 200px;
 }
 
 .header__menu-btn {
@@ -37,6 +51,10 @@ body {
 
 .header__nav-item {
   font-size: 1.2rem;
+}
+
+.header__nav-item:nth-child(4) {
+  border-bottom: 1px solid #ff8500;
 }
 
 .header__nav-link {
@@ -61,9 +79,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  height: 83vh;
   background-color: #f5f5f5;
   padding: 0 4vw;
+  margin: 70px 0 0 0;
 }
 
 .banner__container {
@@ -289,6 +308,10 @@ body {
 @media (max-width: 768px) {
   /* Header */
 
+  .header__img {
+    width: 35vw;
+  }
+
   .header__menu-btn {
     display: block;
     background-color: none;
@@ -315,11 +338,11 @@ body {
   }
 
   .header__nav-list.active {
-    width: 40%;
-    height: 100%;
+    width: 50%;
+    height: 100vh;
     display: block;
     position: absolute;
-    top: 80px;
+    top: 64px;
     right: 0;
     background-color: white;
     z-index: 100;
@@ -331,7 +354,6 @@ body {
   /* Banner */
 
   .banner {
-    height: 80vh;
     flex-direction: column;
     padding: 0;
   }
