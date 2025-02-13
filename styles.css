@@ -140,26 +140,17 @@ body {
   margin: 0 20px 0 0;
 }
 
-@keyframes scrollInfinito {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
 /* Advantage */
 
 .advantage {
-  height: 100%;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #f5f5f5;
   color: #282b2e;
-  padding: 4vh 4vw;
+  padding: 4vh 8vw;
 }
 
 .advantage__title {
@@ -170,7 +161,7 @@ body {
 }
 
 .advantage__video {
-  width: 40vw;
+  width: 35vw;
   background: rgba(255, 255, 255, 0.95);
   box-shadow: 0 8px 16px rgba(40, 43, 46, 0.17);
   backdrop-filter: blur(4px);
@@ -191,9 +182,8 @@ body {
 }
 
 .advantage__content-card {
-  width: 37vw;
+  width: 35vw;
   display: flex;
-  align-items: center;
   align-items: center;
   gap: 2rem;
   background: rgba(255, 255, 255, 0.95);
@@ -205,6 +195,67 @@ body {
 
 .advantage__content-card-img {
   width: 60px;
+}
+
+/* Footer */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #282b2e;
+  color: #fff;
+  padding: 4vh 4vw;
+}
+
+.footer__presentation-logo {
+  width: 200px;
+}
+
+.footer__presentation p {
+  font-size: medium;
+  padding: 0 0 0 0.5rem;
+}
+
+.footer__presentation-media {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer__presentation-media-social-img {
+  height: 30px;
+  width: 30px;
+}
+
+.footer__presentation-media-social:hover
+  .footer__presentation-media-social-img {
+  filter: drop-shadow(0 0 5px #ff8500);
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.footer__contact-item {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer__contact-item img {
+  height: 30px;
+  width: 30px;
+  filter: drop-shadow(0 0 5px #ff8500);
+}
+
+@keyframes scrollInfinito {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* Mobile */
@@ -283,6 +334,10 @@ body {
 
   /* Advantage */
 
+  .advantage {
+    height: auto;
+  }
+
   .advantage__container {
     flex-direction: column;
   }
@@ -293,6 +348,21 @@ body {
 
   .advantage__content-card {
     width: 80vw;
+  }
+
+  /* Footer */
+
+  .footer {
+    flex-direction: column;
+  }
+
+  .footer__presentation,
+  .footer__contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 
   @keyframes scrollInfinitoMobile {
